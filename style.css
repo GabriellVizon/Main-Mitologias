@@ -1,0 +1,286 @@
+body {
+    font-family: 'Lora', serif;
+    background-image: url('https://t3.ftcdn.net/jpg/02/63/38/30/360_F_263383000_d4IhBBolO4ba7uGrWWzYJ4nffQzum2bF.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    padding-top: 80px;
+    line-height: 1.6;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: linear-gradient(180deg, #1a1a1a, #0d0d0d);
+    z-index: 1000;
+    border-bottom: 2px solid #4a2c0b;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+}
+
+header {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 10px solid #4a2c0b;
+}
+
+.header-content h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 4.5em;
+    color: #d4af37;
+    text-shadow: 4px 4px 8px #000;
+    margin: 0;
+}
+
+.header-content .rune {
+    font-size: 0.8em;
+    color: #b8932e;
+}
+
+.header-content p {
+    font-size: 1.3em;
+    color: #ccc;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #e0d5c1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px 22px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    left: 22px;
+    width: calc(100% - 44px);
+    height: 2px;
+    background: #d4af37;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #d4af37;
+    background: rgba(212, 175, 55, 0.1);
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+main {
+    max-width: 1300px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.9);
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+    margin-bottom: 70px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+section:nth-child(1) { animation-delay: 0.2s; }
+section:nth-child(2) { animation-delay: 0.4s; }
+section:nth-child(3) { animation-delay: 0.6s; }
+section:nth-child(4) { animation-delay: 0.8s; }
+section:nth-child(5) { animation-delay: 1s; }
+section:nth-child(6) { animation-delay: 1.2s; }
+
+h2 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 3em;
+    border-bottom: 4px solid #4a2c0b;
+    padding-bottom: 15px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.mitologia-card {
+    display: flex;
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.95), rgba(30, 30, 30, 0.95));
+    border: 3px solid #d4af37;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.mitologia-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(212, 175, 55, 0.6);
+}
+
+.mitologia-card img {
+    width: 350px;
+    min-height: 300px;
+    object-fit: cover;
+    border-right: 3px solid #b8932e;
+}
+
+.card-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-body h3 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.8em;
+    margin: 0 0 15px;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.card-body p {
+    font-size: 1.15em;
+    color: #ccc;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.modal-btn {
+    background-color: #d4af37;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.05em;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    align-self: flex-start;
+}
+
+.modal-btn:hover {
+    background-color: #b8932e;
+}
+
+a {
+    text-decoration: none;
+}
+
+.intro-img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+    border: 4px solid #d4af37;
+    border-radius: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.7));
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    .header-content h1 {
+        font-size: 2.5em;
+    }
+
+    .header-content p {
+        font-size: 1em;
+    }
+
+    nav ul li {
+        margin: 0 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.95em;
+    }
+
+    main {
+        padding: 20px;
+        margin: 20px 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .mitologia-card {
+        flex-direction: column;
+    }
+
+    .mitologia-card img {
+        width: 100%;
+        height: 220px;
+        border-right: none;
+        border-bottom: 3px solid #b8932e;
+    }
+
+    .card-body h3 {
+        font-size: 1.4em;
+    }
+
+    .card-body p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.8em;
+    }
+
+    nav ul li {
+        margin: 0 8px;
+    }
+
+    nav ul li a {
+        font-size: 0.85em;
+    }
+
+    .mitologia-card img {
+        height: 180px;
+    }
+}
