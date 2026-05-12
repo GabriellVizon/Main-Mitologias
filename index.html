@@ -3,101 +3,302 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mitologias do Mundo - Panteões e Lendas</title>
+    <title>PANTHEON — Mitologias do Mundo</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="https://gabriellvizon.github.io/Mitologic_Nordic/IMG/kratosrisad.jfif" id="icon">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://gabriellvizon.github.io/Mitologic_Nordic/IMG/kratosrisad.jfif">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-content">
-            <h1>Mitologias do Mundo <span class="rune">&#9733;</span></h1>
-            <p>Explore os Panteões, Lendas e Mistérios das Grandes Civilizações</p>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-brand">✦ PANTHEON</a>
+            <div class="nav-links">
+                <a href="#hero">Início</a>
+                <a href="#portais">Portais</a>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#intro">Introdução</a></li>
-                <li><a href="#nordica">Nórdica</a></li>
-                <li><a href="#romana">Romana</a></li>
-                <li><a href="#grega">Grega</a></li>
-                <li><a href="#japonesa">Japonesa</a></li>
-                <li><a href="#asteca">Asteca</a></li>
-            </ul>
-        </nav>
-    </header>
+    </nav>
 
-    <main>
-        <section id="intro">
-            <h2>Bem-vindo ao Grande Panteão</h2>
-            <p>As mitologias são o reflexo da alma dos povos. Cada civilização criou suas próprias histórias para explicar a origem do mundo, a natureza humana e os mistérios do cosmos. Aqui você encontrará as principais mitologias que moldaram a humanidade — dos deuses nórdicos de Asgard aos imperadores divinos do Japão, passando pelos heróis da Grécia, os guerreiros astecas e a grandiosidade de Roma.</p>
-            <p>Cada mitologia revela um pouco de como diferentes culturas enxergavam a vida, a morte, o poder e o sagrado. Navegue pelos cards abaixo e mergulhe nesse universo épico.</p>
-            <img src="IMG/intro.jpg" alt="Ilustração de um panteão divino" class="intro-img">
-        </section>
+    <section id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✦ Portal das Civilizações</div>
+            <h1 class="hero-title">
+                <span class="title-line" data-text="MITOLOGIAS">MITOLOGIAS</span>
+                <span class="title-line" data-text="DO MUNDO">DO MUNDO</span>
+            </h1>
+            <div class="hero-divider"></div>
+            <p class="hero-desc">Atravesse os portais dos grandes panteões e descubra as lendas que moldaram a humanidade</p>
+            <a href="#portais" class="hero-cta">
+                <span>Explorar Panteões</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+        </div>
+        <div class="scroll-indicator">
+            <span>Role para explorar</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
 
-        <section id="nordica">
-            <h2>Mitologia Nórdica</h2>
-            <div class="mitologia-card">
-                <img src="https://gabriellvizon.github.io/Mitologic_Nordic/IMG/odin.jpg" alt="Odin, o Todo-Pai">
-                <div class="card-body">
-                    <h3>As Sagas Eternas de Yggdrasil</h3>
-                    <p>Dos Eddas Poéticos ao Ragnarök, explore os deuses Aesir e Vanir, os Nove Mundos, as runas e as criaturas que habitam a árvore cósmica. Odin, Thor, Loki e Freyja aguardam sua jornada.</p>
-                    <a href="https://gabriellvizon.github.io/Mitologic_Nordic/" target="_blank"><button class="modal-btn">Explorar Mitologia Nórdica</button></a>
+    <section id="portais">
+        <div class="portais-header">
+            <span class="section-badge">✦ Escolha seu destino</span>
+            <h2 class="section-title">Panteões</h2>
+            <p class="section-desc">Passe o mouse ou clique sobre um portal para iniciar sua jornada</p>
+        </div>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-btn carousel-prev" aria-label="Anterior">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+
+            <div class="carousel-track" id="carouselTrack">
+                <button class="portal-btn" data-target="nordica" style="--accent: #8ecae6">
+                    <div class="portal-icon">⚡</div>
+                    <span class="portal-name">Nórdica</span>
+                    <span class="portal-sub">Asgard & Yggdrasil</span>
+                </button>
+
+                <button class="portal-btn" data-target="romana" style="--accent: #e63946">
+                    <div class="portal-icon">🏛️</div>
+                    <span class="portal-name">Romana</span>
+                    <span class="portal-sub">O Império Eterno</span>
+                </button>
+
+                <button class="portal-btn" data-target="grega" style="--accent: #f4d03f">
+                    <div class="portal-icon">🏺</div>
+                    <span class="portal-name">Grega</span>
+                    <span class="portal-sub">O Monte Olimpo</span>
+                </button>
+
+                <button class="portal-btn" data-target="japonesa" style="--accent: #f4845f">
+                    <div class="portal-icon">⛩️</div>
+                    <span class="portal-name">Japonesa</span>
+                    <span class="portal-sub">O Caminho dos Kami</span>
+                </button>
+
+                <button class="portal-btn" data-target="asteca" style="--accent: #2a9d8f">
+                    <div class="portal-icon">🌞</div>
+                    <span class="portal-name">Asteca</span>
+                    <span class="portal-sub">O Império do Sol</span>
+                </button>
+            </div>
+
+            <button class="carousel-btn carousel-next" aria-label="Próximo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+            </button>
+        </div>
+    </section>
+
+    <section id="nordica" class="myth-section" style="--section-accent: #8ecae6">
+        <div class="myth-bg">
+            <img src="IMG/bg-nordica.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="myth-overlay"></div>
+        <div class="myth-content">
+            <div class="myth-grid">
+                <div class="myth-info">
+                    <span class="myth-badge">✦ Panteão Nórdico</span>
+                    <h2 class="myth-title">As Sagas Eternas<br>de Yggdrasil</h2>
+                    <p class="myth-desc">Dos Eddas Poéticos ao Ragnarök, mergulhe nos Nove Mundos conectados pela árvore cósmica. Conheça Odin, Thor, Loki e Freyja enquanto exploramos as runas, as criaturas e o destino inevitável dos deuses.</p>
+                    <div class="myth-tags">
+                        <span>Deuses Aesir & Vanir</span>
+                        <span>Nove Mundos</span>
+                        <span>Runas Futhark</span>
+                        <span>Ragnarök</span>
+                    </div>
+                    <a href="https://gabriellvizon.github.io/Mitologic_Nordic/" target="_blank" class="myth-btn">
+                        Acessar Mitologia Nórdica
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="myth-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">9</span>
+                        <span class="stat-label">Mundos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">24</span>
+                        <span class="stat-label">Runas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">12+</span>
+                        <span class="stat-label">Deuses</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="romana">
-            <h2>Mitologia Romana</h2>
-            <div class="mitologia-card">
-                <img src="https://gabriellvizon.github.io/Mitologia-Romana/IMG/Jupiter.avif" alt="Júpiter, rei dos deuses">
-                <div class="card-body">
-                    <h3>O Império Eterno</h3>
-                    <p>Descubra os deuses, heróis e lendas que moldaram o maior império da antiguidade. Júpiter, Marte, Vênus e os heróis como Rômulo e Éneas contam a história de Roma.</p>
-                    <a href="https://gabriellvizon.github.io/Mitologia-Romana/" target="_blank"><button class="modal-btn">Explorar Mitologia Romana</button></a>
+    <section id="romana" class="myth-section" style="--section-accent: #e63946">
+        <div class="myth-bg">
+            <img src="IMG/bg-romana.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="myth-overlay"></div>
+        <div class="myth-content">
+            <div class="myth-grid">
+                <div class="myth-info">
+                    <span class="myth-badge">✦ Panteão Romano</span>
+                    <h2 class="myth-title">O Império<br>Eterno</h2>
+                    <p class="myth-desc">Descubra os deuses, heróis e lendas que moldaram Roma. De Júpiter a Marte, de Rômulo a Éneas, cada história carrega o peso de um império que dominou o mundo antigo.</p>
+                    <div class="myth-tags">
+                        <span>Júpiter & Juno</span>
+                        <span>Heróis Fundadores</span>
+                        <span>Submundo</span>
+                        <span>Campos Elísios</span>
+                    </div>
+                    <a href="https://gabriellvizon.github.io/Mitologia-Romana/" target="_blank" class="myth-btn">
+                        Acessar Mitologia Romana
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="myth-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Deuses Principais</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">7</span>
+                        <span class="stat-label">Reis de Roma</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">753</span>
+                        <span class="stat-label">A.C. Fundação</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="grega">
-            <h2>Mitologia Grega</h2>
-            <div class="mitologia-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Zeus_otricoli_Pio-Clementino_Inv257.jpg/1200px-Zeus_otricoli_Pio-Clementino_Inv257.jpg" alt="Zeus, deus do Olimpo">
-                <div class="card-body">
-                    <h3>O Olimpo e os Heróis</h3>
-                    <p>Do monte Olimpo ao submundo de Hades, a mitologia grega é a base da cultura ocidental. Zeus, Poseidon, Atena, Hércules e os grandes épicos de Homero aguardam.</p>
-                    <a href="#" target="_blank"><button class="modal-btn">Em Breve</button></a>
+    <section id="grega" class="myth-section" style="--section-accent: #f4d03f">
+        <div class="myth-bg">
+            <img src="IMG/bg-grega.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="myth-overlay"></div>
+        <div class="myth-content">
+            <div class="myth-grid">
+                <div class="myth-info">
+                    <span class="myth-badge">✦ Panteão Grego</span>
+                    <h2 class="myth-title">O Monte<br>Olimpo</h2>
+                    <p class="myth-desc">Do Olimpo ao submundo de Hades, a mitologia grega é a espinha dorsal da cultura ocidental. Zeus, Poseidon, Atena, Hércules — os épicos de Homero e as tragédias que definiram a humanidade.</p>
+                    <div class="myth-tags">
+                        <span>Zeus & Hera</span>
+                        <span>12 Trabalhos</span>
+                        <span>Heróis Lendários</span>
+                        <span>Mitos & Tragédias</span>
+                    </div>
+                    <a href="#" target="_blank" class="myth-btn">
+                        Em Breve
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="myth-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Deuses Olímpicos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Trabalhos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">100+</span>
+                        <span class="stat-label">Mitos</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="japonesa">
-            <h2>Mitologia Japonesa</h2>
-            <div class="mitologia-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Amaterasu_cave.jpg/800px-Amaterasu_cave.jpg" alt="Amaterasu, deusa do sol">
-                <div class="card-body">
-                    <h3>O Caminho dos Kami</h3>
-                    <p>Do xintoísmo ao budismo, a mitologia japonesa é um universo de espíritos kami, yokai, deuses como Amaterasu e Susanoo, e criaturas místicas que habitam o Japão ancestral.</p>
-                    <a href="#" target="_blank"><button class="modal-btn">Em Breve</button></a>
+    <section id="japonesa" class="myth-section" style="--section-accent: #f4845f">
+        <div class="myth-bg">
+            <img src="IMG/bg-japonesa.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="myth-overlay"></div>
+        <div class="myth-content">
+            <div class="myth-grid">
+                <div class="myth-info">
+                    <span class="myth-badge">✦ Panteão Japonês</span>
+                    <h2 class="myth-title">O Caminho<br>dos Kami</h2>
+                    <p class="myth-desc">Do xintoísmo ancestral ao budismo, o Japão é habitado por kami, yokai e espíritos da natureza. Amaterasu, Susanoo e Izanagi tecem histórias de criação, honra e o sagrado.</p>
+                    <div class="myth-tags">
+                        <span>Amaterasu</span>
+                        <span>Kami & Yokai</span>
+                        <span>Xintoísmo</span>
+                        <span>Criação do Japão</span>
+                    </div>
+                    <a href="#" target="_blank" class="myth-btn">
+                        Em Breve
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="myth-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">800</span>
+                        <span class="stat-label">Miríades de Kami</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Tesouros Sagrados</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">∞</span>
+                        <span class="stat-label">Yokai</span>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="asteca">
-            <h2>Mitologia Asteca</h2>
-            <div class="mitologia-card">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Quetzalcoatl_teotihuacan_2.jpg/1024px-Quetzalcoatl_teotihuacan_2.jpg" alt="Quetzalcoatl, serpente emplumada">
-                <div class="card-body">
-                    <h3>O Império do Sol</h3>
-                    <p>Explore o panteão asteca, onde deuses como Quetzalcoatl, Tezcatlipoca e Huitzilopochtli governavam ciclos de criação e destruição, em um universo de sacrifício e renovação cósmica.</p>
-                    <a href="#" target="_blank"><button class="modal-btn">Em Breve</button></a>
+    <section id="asteca" class="myth-section" style="--section-accent: #2a9d8f">
+        <div class="myth-bg">
+            <img src="IMG/bg-asteca.jpg" alt="" aria-hidden="true">
+        </div>
+        <div class="myth-overlay"></div>
+        <div class="myth-content">
+            <div class="myth-grid">
+                <div class="myth-info">
+                    <span class="myth-badge">✦ Panteão Asteca</span>
+                    <h2 class="myth-title">O Império<br>do Sol</h2>
+                    <p class="myth-desc">No coração do México antigo, deuses como Quetzalcoatl, Tezcatlipoca e Huitzilopochtli governavam ciclos de criação e destruição. Um universo de sacrifício, renovação cósmica e profecias.</p>
+                    <div class="myth-tags">
+                        <span>Quetzalcoatl</span>
+                        <span>Deuses Guerreiros</span>
+                        <span>Sol & Sacrifício</span>
+                        <span>Profecias</span>
+                    </div>
+                    <a href="#" target="_blank" class="myth-btn">
+                        Em Breve
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="myth-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">13</span>
+                        <span class="stat-label">Céus</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">9</span>
+                        <span class="stat-label">Infernos</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Sóis</span>
+                    </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <footer>
-        <p>Todos os direitos reservados - @2025</p>
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">✦ PANTHEON</div>
+            <p class="footer-text">Todos os direitos reservados &mdash; 2025</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
